@@ -74,7 +74,7 @@ namespace AppointmentScheduler.Controllers
                     Name = model.Name
                 };
 
-                var result = await _userManager.CreateAsync(user);
+                var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, model.RoleName);
