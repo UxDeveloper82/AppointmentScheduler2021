@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppointmentScheduler.Helper
+namespace AppointmentScheduler.Utility
 {
     public static class Helper
     {
