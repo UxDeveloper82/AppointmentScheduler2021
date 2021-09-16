@@ -1,6 +1,7 @@
 ﻿using AppointmentScheduler.Data;
 using AppointmentScheduler.Models;
 using AppointmentScheduler.Models.ViewModels;
+using AppointmentScheduler.Utility;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -33,8 +34,14 @@ namespace AppointmentScheduler.Controllers
         }
 
 
-        public IActionResult Register()
+        public async Task<IActionResult> Register()
         {
+            if (!_roleManager.RoleExistsAsync(Helper.Admin).GetAwaiter().GetResult())
+            {
+                await _roleManager.CreateAsync(new IdentityRole(Helper.Admin));
+                await _roleManager.CreateAsync(new IdentityRole(Helper.Doctor));
+                await _roleManager.CreateAsync(new IdentityRole(Helper.Patient));
+            }
             return View();
         }
 
