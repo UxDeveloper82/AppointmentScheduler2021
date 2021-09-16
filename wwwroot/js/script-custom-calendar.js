@@ -7,7 +7,7 @@ function InitializeCalendar() {
 
 
         var calendarEl = document.getElementById('calendar');
-        if (calendarEl !== null) {
+        if (calendarEl != null) {
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
                 headerToolbar: {
@@ -37,6 +37,17 @@ function onShowModal(obj, isEventDetail) {
 }
 
 function onCloseModal() {
-
     $("#appointmentInput").modal("hide");
+}
+
+function onSubmitForm() {
+    var requestData = {
+        Id: parseInt($("#id").val()),
+        Title: $("#title").val(),
+        Description: $("#description").val(),
+        StartDate: $("#appointmentDate").val(),
+        Duriation: $("#duration").val(),
+        DoctorId: $("#doctorId").val(),
+        PatientId: $("#patientId").val(),
+    };
 }
