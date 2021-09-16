@@ -1,5 +1,6 @@
 ﻿using AppointmentScheduler.Data;
 using AppointmentScheduler.Models.ViewModels;
+using AppointmentScheduler.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
