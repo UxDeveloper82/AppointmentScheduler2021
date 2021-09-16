@@ -53,7 +53,6 @@ namespace AppointmentScheduler
             app.UseStaticFiles();
 
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
 
