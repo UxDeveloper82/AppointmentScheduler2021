@@ -22,6 +22,7 @@ namespace AppointmentScheduler.Controllers
         {
             ViewBag.DoctorList = _appointmentService.GetDoctorList();
             ViewBag.PatientList = _appointmentService.GetPatientList();
+            ViewBag.PatientList = _appointmentService.GetPatientList();
             return View();
         }
     }
