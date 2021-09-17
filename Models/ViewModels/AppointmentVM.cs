@@ -13,7 +13,7 @@ namespace AppointmentScheduler.Models.ViewModels
         public string Description { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
-        public int Duriation { get; set; }
+        public int Duration { get; set; }
         public string DoctorId { get; set; }
         public string PatientId { get; set; }
         public bool IsDoctorApproved { get; set; }
