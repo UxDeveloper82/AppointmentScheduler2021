@@ -44,7 +44,7 @@
         <label class="col-md-2" asp-for="RoleName"></label>
         <div class=" col-md-10">
             <select asp-for="RoleName"
-                    asp-items="@AppointmentScheduler.Utility.Helper.GetRolesForDropDown(User.IsInRole(AppointmentScheduling.Utility.Helper.Admin))"
+                    asp-items="@AppointmentScheduler.Utility.Helper.GetRolesForDropDown(User.IsInRole(AppointmentScheduler.Utility.Helper.Admin))"
                     class="form-control"></select>
             <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
         </div>

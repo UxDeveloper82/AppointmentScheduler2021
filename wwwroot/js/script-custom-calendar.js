@@ -13,7 +13,7 @@ function InitializeCalendar() {
 
 
         var calendarEl = document.getElementById('calendar');
-        if (calendarEl != null) {
+        if (calendarEl !== null) {
             calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
                 headerToolbar: {
@@ -71,7 +71,7 @@ function InitializeCalendar() {
 
 
 function onShowModal(obj, isEventDetail) {
-    if (isEventDetail != null) {
+    if (isEventDetail !== null) {
 
         $("#title").val(obj.title);
         $("#description").val(obj.description);
