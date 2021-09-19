@@ -103,7 +103,7 @@ namespace AppointmentScheduler.Migrations
                     b.Property<string>("DoctorId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Duriation")
+                    b.Property<int>("Duration")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("EndDate")

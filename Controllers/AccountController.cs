@@ -53,7 +53,7 @@ namespace AppointmentScheduler.Controllers
             return View(model);
         }
 
-            public async Task<IActionResult> Register()
+        public async Task<IActionResult> Register()
         {
             if (!_roleManager.RoleExistsAsync(Helper.Admin).GetAwaiter().GetResult())
             {
