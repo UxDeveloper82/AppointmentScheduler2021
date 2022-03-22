@@ -30,7 +30,7 @@ namespace AppointmentScheduler
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>
-                (options =>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                (options =>options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews();
             services.AddTransient<IAppointmentService, AppointmentService>();
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
